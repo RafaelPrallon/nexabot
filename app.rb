@@ -8,7 +8,7 @@ require 'sinatra/activerecord'
 # Importa o arquivo de configuração do banco
 require './config/database'
 
-# Classe principal da aplicação
+Dir["./app/models/*.rb"].each {|file| require file }
 
 class App < Sinatra::Base
   get '/' do

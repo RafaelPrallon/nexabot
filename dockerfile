@@ -1,7 +1,7 @@
 FROM ruby:2.5.1-slim
 # Instala as nossas dependencias
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-  build-essential libpq-dev
+      build-essential libpq-dev
 # Seta nosso path
 ENV INSTALL_PATH /nexabot
 # Cria nosso diretório

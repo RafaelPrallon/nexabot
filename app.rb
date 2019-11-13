@@ -16,7 +16,7 @@ class App < Sinatra::Base
   end
 
   post '/webhook' do
-    request.body.rewind
+    request.body.rewind # o sinatra precisa desse comando para processar a request
     result = JSON.parse(request.body.read)["queryResult"]
  
     if result["contexts"].present?
